@@ -33,22 +33,28 @@ export const { styled, globalCss } = createStitches({
             blue1: '#4d77ff',
 
             // General purpose.
-            bodyBgColor: '$white7',
-            sectionBgColor: '$white1',
-            separatorBgColor: '$black3',
+            bodyBg: '$white7',
+            sectionBg: '$white1',
+            separatorBg: '$black3',
 
             // Sidebar.
-            sidebarButtonBgColor: '$white2',
+            sidebarTitle: '$black1',
+            sidebarClassNameText: '$black2',
+            sidebarHomeworkNameText: '$black2',
+            sidebarButtonBg: '$white2',
+            sidebarButtonText: '$black2',
+            sidebarHomeworkDetailText: '$black2',
+            sidebarHomeworkDetailBg: '$white3',
 
             // Post creator.
-            postCreatorTextareaBgColor: '$white5',
+            postCreatorTextareaBg: '$white5',
             postCreatorTextareaPlaceholder: '$white4',
-            postCreatorDropdownBgColor: '$white5',
+            postCreatorDropdownBg: '$white5',
             postCreatorDropdownText: '$black1',
-            postCreatorSubmitButtonBgColor: '$green1',
+            postCreatorSubmitButtonBg: '$green1',
             postCreatorSubmitButtonText: '$white3',
             postCreatorCancelButtonText: '$orange1',
-            postCreatorAttachmentButtonBgColor: '$white3',
+            postCreatorAttachmentButtonBg: '$white3',
 
             // Posts main title.
             postsSectionTitle: '$black1',
@@ -57,8 +63,8 @@ export const { styled, globalCss } = createStitches({
             postCardUserNameText: '$black1',
             postCardPublishedInText: '$black2',
             postCardClassNameText: '$black1',
-            postCardDate: '$white4',
-            postCardHeaderAndFooterBgColor: '$white6',
+            postCardDateText: '$white4',
+            postCardHeaderAndFooterBg: '$white6',
             postCardLikeAndCommentText: '$black1'
         },
 
@@ -73,7 +79,24 @@ export const { styled, globalCss } = createStitches({
             scale3: '1.4rem',
             scale4: '1.5rem',
             scale5: '1.8rem',
-            scale6: '2.2rem'
+            scale6: '2.2rem',
+
+            pageTitle: '$scale6',
+            navigationLink: '$scale4',
+
+            sidebarTitle: '$scale5',
+            sidebarClassName: '$scale4',
+            sidebarHomework: '$scale4',
+            sidebarButton: '$scale3',
+            homeworkDetail: '$scale1',
+
+            postCreator: '$scale4',
+
+            postsSectionTitle: '$scale5',
+            postCardUserName: '$scale4',
+            postCardClassName: '$scale4',
+            postCardDate: '$scale2',
+            postCardLikeAndComment: '$scale2'
         },
 
         fontWeights: {
@@ -86,10 +109,6 @@ export const { styled, globalCss } = createStitches({
             md: 1.5
         },
 
-        space: {},
-
-        shadows: {},
-
         radii: {
             sm: 3,
             md: 10
@@ -99,4 +118,23 @@ export const { styled, globalCss } = createStitches({
 
 // The global styles that will be applied to
 // the application.
-export const globalStyles = globalCss({})
+export const globalStyles = globalCss({
+    '*, *::before, *::after': {
+        margin: 0,
+        padding: 0,
+        boxSizing: 'border-box'
+    },
+
+    ':root': {
+        fontSize: '$root',
+        fontFamily: '$poppins',
+        lineHeight: '$md'
+    },
+
+    'a, input, textarea, button': {
+        textDecoration: 'none',
+        fontSize: 'inherit',
+        fontFamily: 'inherit',
+        color: 'inherit'
+    }
+})
