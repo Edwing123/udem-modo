@@ -37,6 +37,10 @@ export const { styled, globalCss } = createStitches({
             sectionBg: '$white1',
             separatorBg: '$black3',
 
+            // Header.
+            pageTitleText: '$purple1',
+            navigationLinkText: '$black1',
+
             // Sidebar.
             sidebarTitle: '$black1',
             sidebarClassNameText: '$black2',
@@ -112,6 +116,11 @@ export const { styled, globalCss } = createStitches({
         radii: {
             sm: 3,
             md: 10
+        },
+
+        sizes: {
+            contentMaxWidth: '1200px',
+            contentWidth: '95%'
         }
     }
 })
@@ -136,5 +145,9 @@ export const globalStyles = globalCss({
         fontSize: 'inherit',
         fontFamily: 'inherit',
         color: 'inherit'
+    },
+
+    body: {
+        backgroundColor: '$bodyBg'
     }
 })
