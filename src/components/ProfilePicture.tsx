@@ -5,7 +5,8 @@ const StyledImage = styled('img', {
     width: '50px',
     height: '50px',
     objectFit: 'cover',
-    borderRadius: '100%'
+    borderRadius: '100%',
+    verticalAlign: 'top'
 })
 
 const ProfilePicture = () => {
