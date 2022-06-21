@@ -3,7 +3,7 @@ import { createStitches } from '@stitches/react'
 /**
  * Stitches configuration.
  */
-export const { styled, globalCss } = createStitches({
+export const { styled, css, globalCss } = createStitches({
     theme: {
         colors: {
             // White-ish.
@@ -91,7 +91,7 @@ export const { styled, globalCss } = createStitches({
             sidebarTitle: '$scale5',
             sidebarClassName: '$scale4',
             sidebarHomework: '$scale4',
-            sidebarButton: '$scale3',
+            sidebarButton: '$scale2',
             homeworkDetail: '$scale1',
 
             postCreator: '$scale4',
@@ -105,7 +105,7 @@ export const { styled, globalCss } = createStitches({
 
         fontWeights: {
             regular: 400,
-            medium: 600,
+            medium: 500,
             bold: 700
         },
 
@@ -114,13 +114,17 @@ export const { styled, globalCss } = createStitches({
         },
 
         radii: {
-            sm: 3,
-            md: 10
+            sm: '3px',
+            md: '10px'
         },
 
         sizes: {
-            contentMaxWidth: '1200px',
+            contentMaxWidth: '1400px',
             contentWidth: '95%'
+        },
+
+        shadows: {
+            borderLike: '0 0 2px $colors$black3'
         }
     }
 })

@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import { Header } from './components'
+import { Home } from './pages'
 import { globalStyles } from './stitches.config'
 
 const App = () => {
@@ -8,11 +9,11 @@ const App = () => {
     return (
         <>
             <Header />
-            <main className='main'>
+            <div className='page-container'>
                 <Routes>
-                    <Route path='/' element={<h1>Hello World</h1>} />
+                    <Route path='/' element={<Home />} />
                 </Routes>
-            </main>
+            </div>
         </>
     )
 }

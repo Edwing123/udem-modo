@@ -3,7 +3,9 @@ import { PageLogo, Container, Navigation, ProfilePicture, Icon } from '.'
 
 const StyledHeader = styled('header', {
     padding: '16px  0',
-    backgroundColor: '$sectionBg'
+
+    backgroundColor: '$sectionBg',
+    boxShadow: '$borderLike'
 })
 
 const NotificationsButton = styled('button', {

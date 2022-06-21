@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Primera asignacion Desarrollo web",
+        "status": "pending",
+        "createdAt": "16/06/2022",
+        "dueTo": "22/06/2022",
+        "className": "Desarrollo Web Entorno Al Cliente"
+    },
+    {
+        "id": 2,
+        "title": "Examen de rescate de Redes y Telecomunicaciones",
+        "status": "pending",
+        "createdAt": "01/02/2022",
+        "dueTo": "02/02/2022",
+        "className": "Redes Y Telecomunicaciones"
+    },
+    {
+        "id": 3,
+        "title": "Tercera prueba de Redes 2",
+        "status": "late",
+        "createdAt": "05/06/2022",
+        "dueTo": "12/06/2022",
+        "className": "Redes 2"
+    }
+]
