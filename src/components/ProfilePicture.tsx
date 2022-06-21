@@ -13,6 +13,7 @@ const ProfilePicture = () => {
     return (
         <Link to='/' title='Ajustes de usuario' aria-label='Ajustes de usuario'>
             <StyledImage
+                alt=''
                 aria-hidden='true'
                 src='/assets/edwin-profile-picture.webp'
             />

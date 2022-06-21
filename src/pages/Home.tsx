@@ -8,68 +8,58 @@ import {
     PostCreator
 } from '../components'
 
-const StyledSection = styled('section', {
+const HomeContentContainer = styled('section', {
+    position: 'relative',
     display: 'grid',
     columnGap: '40px',
     alignItems: 'start',
     gridTemplateColumns: '18% 1fr 25%',
-
-    position: 'relative'
+    maxWidth: '$contentMaxWidth',
+    width: '$contentWidth',
+    margin: '40px auto'
 })
 
-const StyledMain = styled('main', {
-    backgroundColor: '$sectionBg',
-    borderRadius: '$md'
-})
+const StyledMain = styled('main', {})
 
-const sidebarButtonStyles = css({
-    display: 'inline-block',
-    padding: '1em 2em',
+const ClassesListSidebar = () => {
+    return (
+        <Sidebar.Container
+            title='Mis Clases'
+            css={{ position: 'sticky', top: '40px' }}
+        >
+            <ClassesList />
+            <Container css={{ margin: '20px 0', textAlign: 'center' }}>
+                <Sidebar.Button to='/'>Ver todas las clases</Sidebar.Button>
+            </Container>
+        </Sidebar.Container>
+    )
+}
 
-    borderRadius: '$sm',
-    fontSize: '$sidebarButton',
-    fontWeight: '$medium',
-    color: '$sidebarButtonText',
-    backgroundColor: '$sidebarButtonBg',
-
-    '&:hover': {
-        backgroundColor: '$white4'
-    }
-})()
+const HomeworksListSidebar = () => {
+    return (
+        <Sidebar.Container
+            title='Tareas Pendientes'
+            css={{ position: 'sticky', top: '40px' }}
+        >
+            <HomeworksList />
+            <Container css={{ margin: '20px 0', textAlign: 'center' }}>
+                <Sidebar.Button to='/'>Ver todas las tareas</Sidebar.Button>
+            </Container>
+        </Sidebar.Container>
+    )
+}
 
 const Home = () => {
     return (
-        <Container
-            css={{
-                maxWidth: '$contentMaxWidth',
-                width: '$contentWidth',
-                margin: '40px auto'
-            }}
-        >
-            <StyledSection>
-                <Sidebar.Container title='Mis Clases'>
-                    <ClassesList />
-                    <Container css={{ margin: '20px 0', textAlign: 'center' }}>
-                        <Sidebar.Button to='/'>
-                            Ver todas las clases
-                        </Sidebar.Button>
-                    </Container>
-                </Sidebar.Container>
+        <HomeContentContainer>
+            <ClassesListSidebar />
 
-                <StyledMain className='main'>
-                    <h2>Hello World</h2>
-                </StyledMain>
+            <StyledMain className='main'>
+                <PostCreator />
+            </StyledMain>
 
-                <Sidebar.Container title='Tareas Pendientes'>
-                    <HomeworksList />
-                    <Container css={{ margin: '20px 0', textAlign: 'center' }}>
-                        <Sidebar.Button to='/'>
-                            Ver todas las tareas
-                        </Sidebar.Button>
-                    </Container>
-                </Sidebar.Container>
-            </StyledSection>
-        </Container>
+            <HomeworksListSidebar />
+        </HomeContentContainer>
     )
 }
 

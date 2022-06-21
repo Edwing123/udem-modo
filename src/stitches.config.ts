@@ -1,9 +1,9 @@
-import { createStitches } from '@stitches/react'
+import { createStitches, CSS as StitchesCSS } from '@stitches/react'
 
 /**
  * Stitches configuration.
  */
-export const { styled, css, globalCss } = createStitches({
+export const { styled, css, globalCss, config } = createStitches({
     theme: {
         colors: {
             // White-ish.
@@ -13,7 +13,7 @@ export const { styled, css, globalCss } = createStitches({
             white4: '#acacac',
             white5: '#fcfcfc',
             white6: '#fafafa',
-            white7: '#f4f4f4',
+            white7: '#efefef',
 
             // Black-ish.
             black1: '#333A56',
@@ -24,10 +24,12 @@ export const { styled, css, globalCss } = createStitches({
             purple1: '#764af1',
 
             // Green-ish.
-            green1: '#00b488',
+            green1: '#1abc94',
+            green2: '#00906d',
 
             // Orange-ish.
             orange1: '#f24c4c',
+            orange2: '#c23d3d',
 
             // Blue-ish.
             blue1: '#4d77ff',
@@ -53,12 +55,16 @@ export const { styled, css, globalCss } = createStitches({
             // Post creator.
             postCreatorTextareaBg: '$white5',
             postCreatorTextareaPlaceholder: '$white4',
-            postCreatorDropdownBg: '$white5',
+            postCreatorDropdownBg: '$white3',
+            postCreatorOnHoverDropdownBg: '$white2',
             postCreatorDropdownText: '$black1',
             postCreatorSubmitButtonBg: '$green1',
-            postCreatorSubmitButtonText: '$white3',
+            postCreatorSubmitButtonText: '$white1',
+            postCreatorOnHoverSubmitButtonBg: '$green2',
             postCreatorCancelButtonText: '$orange1',
+            postCreatorOnHoverCancelButtonText: '$orange2',
             postCreatorAttachmentButtonBg: '$white3',
+            postCreatorOnHoverAttachmentButtonBg: '$white2',
 
             // Posts main title.
             postsSectionTitle: '$black1',
@@ -128,6 +134,8 @@ export const { styled, css, globalCss } = createStitches({
         }
     }
 })
+
+export type CSS = StitchesCSS<typeof config>
 
 // The global styles that will be applied to
 // the application.

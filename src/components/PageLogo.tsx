@@ -20,7 +20,13 @@ const StyledTitle = styled('h1', {
 const PageLogo = () => {
     return (
         <StyledLink href='/'>
-            <StyledLogo width='50' height='50' src={logo} aria-hidden='true' />
+            <StyledLogo
+                alt=''
+                width='50'
+                height='50'
+                src={logo}
+                aria-hidden='true'
+            />
             <StyledTitle>UdeMModo</StyledTitle>
         </StyledLink>
     )

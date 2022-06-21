@@ -1,11 +1,7 @@
 import { FC, ReactElement } from 'react'
 import { Link } from 'react-router-dom'
 import { styled, css } from '../stitches.config'
-
-type SidebarProps = {
-    title: string
-    children: ReactElement | ReactElement[]
-}
+import type { CSS } from '../stitches.config'
 
 const StyledAside = styled('aside', {
     padding: '0 8px',
@@ -23,9 +19,15 @@ const StyledTitle = styled('h2', {
     textAlign: 'center'
 })
 
-export const Container: FC<SidebarProps> = ({ title, children }) => {
+type SidebarProps = {
+    title: string
+    children: ReactElement | ReactElement[]
+    css?: CSS
+}
+
+export const Container: FC<SidebarProps> = ({ title, children, css }) => {
     return (
-        <StyledAside>
+        <StyledAside css={css}>
             <StyledTitle>{title}</StyledTitle>
             {children}
         </StyledAside>
